@@ -7,17 +7,16 @@ pipeline {
 			
                 }
 		post {
-       always {
-           jiraSendBuildInfo branch: '', site: 'navjit.atlassian.net'
-       }
-   }
-        }
-	    stage('Two'){
-		    
+       			always {
+           			jiraSendBuildInfo branch: '', site: 'navjit.atlassian.net'
+       			}
+       		}
+      	}
+        stage('Two'){	    
 		steps {
 			input('Do you want to proceed?')
-        }
-	    }
+        	}
+	}
         stage('Three') {
                 when {
                         not {
@@ -35,9 +34,9 @@ pipeline {
                                         echo "Running the unit test..."
                                 }
                         }
-                               
-			}  }
-        }
+                        }  
+	}
+        
     }
 }
 
