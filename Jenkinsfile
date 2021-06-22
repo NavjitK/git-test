@@ -6,6 +6,11 @@ pipeline {
                         echo 'Hi, this is Zulaikha from edureka'
 			
                 }
+		post {
+       always {
+           jiraSendBuildInfo branch: '', site: 'navjit.atlassian.net'
+       }
+   }
         }
 	    stage('Two'){
 		    
