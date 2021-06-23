@@ -1,2 +1,2 @@
 # git-test
-commit one..
+commit one.
